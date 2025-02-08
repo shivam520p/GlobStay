@@ -1,0 +1,379 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --text-c-white: #ffffff;
+  --primary-c-text: #68732F;
+  --primary-c-light: #97A195;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="date"]{
+  color: var(--primary-c-light);
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.customOverlay:after {
+  position: absolute;
+  content: '';
+  background-color: rgb(0 0 0 / 0.3);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.nav ul li a.active {
+  position: relative;
+  color: var(--primary-c-text);
+}
+
+.nav ul li a.active::after {
+  position: absolute;
+  content: '';
+  top: 24px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--primary-c-text);
+}
+
+.tabs a{
+  position: relative;
+}
+
+.tabs a.active{
+  position: relative;
+  color: var(--primary-c-text);
+}
+
+.tabs a.active::after {
+  position: absolute;
+  content: '';
+  top: 52px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--primary-c-text);
+}
+.hero .swiper-pagination-bullet {
+  background-color: rgb(255 255 255) !important;
+}
+.hero .swiper-pagination-bullet-active {
+  background-color: #4CAF50!important;
+}
+
+.tabBtn a {
+  color: var(--text-c-white);
+  opacity: 0.8;
+}
+
+.tabBtn a.active {
+  border-bottom: 1px solid var(--text-c-white);
+  color: var(--text-c-white);
+  opacity: 1;
+}
+
+.inputBox {
+  display: block;
+  position: relative;
+}
+
+.inputBox {
+  border-bottom: #dedede 1px solid;
+}
+.serachBarInput button {
+  padding: 24px;
+}
+
+.roomCard .swiper-pagination-bullet {
+  background-color: rgb(255 255 255/0.3) !important;
+}
+.roomCard .swiper-pagination-bullet-active {
+  background-color: #ffffff!important;
+}
+
+.roomCard .swiper-button-next,
+.roomCard .swiper-button-prev {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255);
+  border-radius: 50%;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0!important;
+  transition: opacity 0.3s ease;
+}
+.roomCard .swiper-button-prev:after, .roomCard .swiper-button-next:after{
+  font-size: 15px !important;
+}
+
+.roomCard:hover .swiper-button-next,
+.roomCard:hover .swiper-button-prev {
+  opacity: 1!important; /* Show arrows on hover */
+}
+
+.roomCard .swiper-button-next:hover,
+.roomCard .swiper-button-prev:hover {
+  font-size: 24px;
+  transform: scale(1.2);
+  transition-duration: 300ms;
+}
+
+.roomCard button:focus {
+  outline: none;
+  box-shadow: none
+}
+
+.roomCard button:focus-visible {
+  outline: 2px solid #4f8a8b;
+}
+
+.roomCard .swiper-button-next, .roomCard  .swiper-button-prev {
+  display: none;
+}
+
+.logoftr {
+  width: 100px;
+  height: 50px;
+}
+
+.ftrwdt ul {
+  margin-top: 16px;
+}
+
+
+.ftrwdt ul li {
+  margin-bottom: 10px;
+}
+
+.ftrwdt ul li:last-child {
+  margin-bottom: 0;
+}
+
+.ftrwdt ul li a {
+  font-size: 16px;
+  color: var(--text-c-white);
+  opacity: 0.7;
+}
+
+.ftrwdt h4 {
+  position: relative;
+  display: inline;
+}
+
+.ftrwdt h4::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50%;
+  border-bottom: 2px solid var(--text-c-white);
+}
+
+.sbsInput input {
+  border-radius: 6px 0 0 6px;
+  padding: 16px 70px 16px 16px;
+}
+
+.ftrCopRyt {
+  border-top: 1px solid var(--primary-c-light);
+}
+
+@media (min-width: 1024px) {
+.roomCard .swiper-button-next, .roomCard .swiper-button-prev {
+      display: flex;
+  }
+.inputBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  background-color: #000;
+  height: 100%;
+  margin: auto 0;
+}
+.inputBox {
+  border-bottom: none;
+}
+.serachBarInput button {
+  padding: 24px 32px 24px 24px;
+}
+
+.sbsInput input {
+  border-radius: 6px 0 0 6px;
+  padding: 16px 0 16px 16px;
+}
+
+}
+
+.testswiper {
+  position: relative;
+}
+
+.testswiper .swiper-pagination-bullet-active {
+  background-color: #525252!important;
+}
+
+.testswiper .swiper-pagination-bullet {
+  background-color: #525252!important;
+}
+
+.testswiper .swiper-button-next,
+.testswiper .swiper-button-prev {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255);
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.testswiper {
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* Position the previous button on the left */
+.testswiper  .swiper-button-prev {
+  left: 10px; /* adjust this to your preference */
+}
+
+/* Position the next button on the right */
+.testswiper  .swiper-button-next {
+  right: 10px; /* adjust this to your preference */
+}
+
+/* Style for pagination (bullets) */
+.testswiper  .swiper-pagination {
+  position: inherit;
+  z-index: 5!important;
+  margin-top: 48px;
+}
+
+.testswiper .swiper-slide {
+  transition: transform 0.3s ease;
+  transform: scale(0.8)!important;
+}
+
+.testswiper .swiper-slide-next {
+  transform: scale(1)!important; /* Increase the size of the next slide by 30% */
+}
+
+@media (max-width: 648px) {
+  .sbsInput input {
+    width: 100%;
+    border-radius: 6px;
+    padding: 16px 70px 16px 16px;
+    margin-bottom: 12px;
+}
+  }
+
+  @media (max-width: 1024px) {
+    .sbsInput input {
+      width: 100%;
+      border-radius: 6px;
+      padding: 16px 70px 16px 16px;
+      margin-bottom: 12px;
+  }
+  .tabBtn a{
+    margin-bottom: 0;
+  }
+
+  .tabBtn a {
+    color: var(--primary-c-text);
+    opacity: 0.8;
+  }
+  
+  .tabBtn a.active {
+    border-bottom: 1px solid var(--primary-c-text);
+    color: var(--primary-c-text);
+    opacity: 1;
+  }
+    }
+
+
+    /* width */
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-c-light);
+  border-radius: 10px;
+}
+
+    /* width */
+    .customScroll::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    /* Track */
+    .customScroll::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    .customScroll::-webkit-scrollbar-thumb {
+      background: var(--primary-c-light);
+      border-radius: 10px;
+    }
+
+
+    .truncate-description {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+    #plan_date{
+      border: 1px solid rgb(209 213 219 / var(--tw-border-opacity, 1));
+    }
